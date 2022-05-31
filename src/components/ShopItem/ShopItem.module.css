@@ -1,0 +1,14 @@
+.shopItemWrapper{
+    display: flex;
+}
+
+.shopItemPurchased {
+    display: flex;
+    background-color: green;
+} 
+
+.shopItem{
+    display: flex;
+    background-color: yellow;
+}
+
