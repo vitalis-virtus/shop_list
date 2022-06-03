@@ -61,7 +61,7 @@ import { connect} from "react-redux";
 
   return (
     <section className={styles.formWrapper}>
-      <h1 className={styles.header}>ShopList</h1>
+      <h2 className={styles.header}>Add product</h2>
       <Formik
         initialValues={initialFormValues}
         onSubmit={(values, actions) => {

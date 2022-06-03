@@ -5,6 +5,8 @@ const addShopItem = (text) => ({
   payload: {
     id: uuidv4(),
     text,
+    price: 100,
+    count: 1,
     isPurchased: false,
   },
 });

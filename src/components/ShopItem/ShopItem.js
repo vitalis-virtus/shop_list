@@ -15,7 +15,7 @@ class ShopItem extends Component {
             buyItem(item.id);
           }}
         >
-          Buy
+          Done
         </button>
         <div
           className={
@@ -29,8 +29,26 @@ class ShopItem extends Component {
               removeItem(item.id);
             }}
           >
-            Remove
+            Delete
           </button>
+          <button
+            type="button"
+            // onClick={(event) => {
+            //   removeItem(item.id);
+            // }}
+          >
+            +
+          </button>
+          <p>{item.count}</p>
+          <button
+            type="button"
+            // onClick={(event) => {
+            //   removeItem(item.id);
+            // }}
+          >
+            -
+          </button>
+          <p>${item.price}</p>
         </div>
       </div>
     );
@@ -39,7 +57,7 @@ class ShopItem extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
   removeItem: (id) => dispatch(actions.removeShopItem(id)),
-  buyItem: (id)=>dispatch(actions.buyShopItem(id))
+  buyItem: (id) => dispatch(actions.buyShopItem(id)),
 });
 
 export default connect(null, mapDispatchToProps)(ShopItem);

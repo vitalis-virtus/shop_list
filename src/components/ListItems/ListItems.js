@@ -22,14 +22,14 @@ class ListItems extends Component {
   render() {
     const { shopItems } = this.props;
     return (
-      <section>
+      <section className="listItems_container">
+        <h1>ShopList</h1>
         <ul>
           {shopItems.map((item) => (
             <li key={item.id}>
               <ShopItem item={item} />
             </li>
           ))}
-          {/* <ShopItem items={shopItems} /> */}
         </ul>
       </section>
     );

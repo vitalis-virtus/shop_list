@@ -2,10 +2,12 @@ const initialState = [
   // {
   //   text: "sdfsdfsdf",
   //   id: "sdf-sdf8sdf",
+  // price: 100
   // },
   // {
   //   text: "fsdfsdfs",
   //   id: "sfsd087s67df",
+  // price: 100
   // },
 ];
 
@@ -22,8 +24,11 @@ const shopReducer = (state = initialState, action) => {
         itemToUpdate.isPurchased = !itemToUpdate.isPurchased;
       }
       console.log(itemToUpdate);
-      console.log(state.filter((item) => item.id !== action.payload.id))
-      return[...state.filter((item) => item.id !== action.payload.id), itemToUpdate]
+      console.log(state.filter((item) => item.id !== action.payload.id));
+      return [
+        ...state.filter((item) => item.id !== action.payload.id),
+        itemToUpdate,
+      ];
     default:
       return state;
   }
